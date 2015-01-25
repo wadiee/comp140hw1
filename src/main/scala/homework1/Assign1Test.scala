@@ -517,4 +517,138 @@ class Assign1Test extends TestCase {
     }
   }
 
+  def testMediumBad() = {
+    try {
+      val input = "f(,x)";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case ee: Exception => fail("Got other exception" + ee.printStackTrace())
+    }
+  }
+
+  def testMediumBad1() = {
+    try {
+      val input = "f(x,)";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case ee: Exception => fail("Got other exception" + ee.printStackTrace())
+    }
+  }
+
+  def testMediumBad2() = {
+    try {
+      val input = "if let x:= 3 in let y := 3 in 4 then true else false";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case _ => fail("Got other exception")
+    }
+  }
+
+  def testMediumBad4() = {
+    try {
+      val input = "let to 1 + 2 - 3";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case _ => fail("Got other exception")
+    }
+  }
+
+  def testMediumBad5() = {
+    try {
+      val input = "f g";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case _ => fail("Got other exception")
+    }
+  }
+
+  def testMediumBad6() = {
+    try {
+      val input = "let ; in 3 = 4 + 6";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case _ => fail("Got other exception")
+    }
+  }
+
+  def testMediumBad7() = {
+    try {
+      val input = "let \n  null?:=3;\nin\n  f(null?)";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case ee: Exception => fail("Got other exception" + ee.printStackTrace())
+    }
+  }
+
+  def testMediumBad8() = {
+    try {
+      val input = "let \n  null?=3;\nin\n  f(null?)";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case _ => fail("Got other exception")
+    }
+  }
+
+  def testMediumBad9() = {
+    try {
+      val input = "let\n  f:= map x to f((x + y);\nin\n  if x then y else z";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case _ => fail("Got other exception")
+    }
+  }
+
+  def testMediumBad10() = {
+    try {
+      val input = "let\n  f := map n to if n = 0 then 1; \nin\n  f(5)";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case _ => fail("Got other exception")
+    }
+  }
+
+
+  def testBad11() = {
+    try {
+      val input = "let f := 4 = 6; g := 12 * h(j); h := 50 in x";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case ee: Exception => fail("Got other exception" + ee.printStackTrace())
+    }
+  }
+
+  def testBad12() = {
+    try {
+      val input = "let\n  f := map n to if n = 0 then 1 else n * f(n - 1); \nin\n  let\n    f := map n,m,k to if (n <= 0 & n >= 0)\n                  | (n < 0 & n > 0 & n != 0) then number?\n                                           else m / f(k + 1);\n  in\n     let x:=3;\n         y:=4;\n         z:=cons?(function?(x ^ ~y), cons(-arity(x)));\n     in\n        let x=3;\n            y:=4;\n            z:=g();\n        in\n            (g(x,y,z))(null?(true),list?(false),first(null))";
+      checkStringBad("", input );
+      fail("Expected ParseException")
+    } catch {
+      case e: ParseException =>
+      case ee: Exception => fail("Got other exception" + ee.printStackTrace())
+    }
+  }
+
+
 }

@@ -166,7 +166,10 @@ class Parser(in: Lexer) {
     case null => Array()
     case Comma => {
       in.readToken()
-      parseExpList()
+      in.peek() match {
+        case RightParen => throw new ParseException("Comma is directly followed by a Right Paren")
+        case _ => parseExpList()
+      }
     }
     case RightParen => Array()
     case _ => {
@@ -191,14 +194,20 @@ class Parser(in: Lexer) {
       val next = in.peek()
       if (next eq LeftParen) {
         in.readToken() // remove left paren from input stream
-        val exps = parseExpList()
         in.peek() match {
-          case RightParen => {
-            in.readToken()
+          case Comma => throw new ParseException("Left paren is followed directly by a comma")
+          case _ => {
+            val exps = parseExpList()
+            in.peek() match {
+              case RightParen => {
+                in.readToken()
+              }
+              case _ => throw new ParseException("Left paren is not matched with right paren")
+            }
+            App(factor, exps)
           }
-          case _ => throw new ParseException("Left paren is not matched with right paren")
         }
-        App(factor, exps)
+
       }
       else factor
     }

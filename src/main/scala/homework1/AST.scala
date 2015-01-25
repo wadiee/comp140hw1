@@ -372,7 +372,7 @@ class Lexer(rdr: Reader) extends StreamTokenizer(new BufferedReader(rdr)) {
     wordTable.put("function?", PrimFun("function?"))
     //    wordTable.put("ref?",      PrimFun("ref?"));
     wordTable.put("list?",     PrimFun("list?"))
-    wordTable.put("empty?",    PrimFun("empty?"))
+    wordTable.put("null?",    PrimFun("null?"))
     wordTable.put("cons?",     PrimFun("cons?"))
     wordTable.put("arity",     PrimFun("arity"))
     wordTable.put("cons",      PrimFun("cons"))
