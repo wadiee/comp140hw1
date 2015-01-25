@@ -1,10 +1,11 @@
 [debug] Other repositories:
 [debug] Default repositories:
-[debug] 	Raw(ProjectResolver(inter-project, mapped: ))
+[debug] 	Raw(ProjectResolver(inter-project, mapped: default#global-plugins;0.0))
 [debug] 	URLRepository(typesafe-ivy-releases,Patterns(ivyPatterns=List(http://repo.typesafe.com/typesafe/ivy-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(http://repo.typesafe.com/typesafe/ivy-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false, descriptorOptional=false, skipConsistencyCheck=false))
 [debug] 	URLRepository(sbt-plugin-releases,Patterns(ivyPatterns=List(http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false, descriptorOptional=false, skipConsistencyCheck=false))
 [debug] 	FileRepository(local,FileConfiguration(true,None),Patterns(ivyPatterns=List(${ivy.home}/local/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(${ivy.home}/local/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false, descriptorOptional=false, skipConsistencyCheck=false))
 [debug] 	public: http://repo1.maven.org/maven2/
+[debug] 	sbt-releases: http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: homework1#homework1$sbt_2.11;1.0
 [debug] 	confs: [default]
@@ -563,13 +564,21 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-sbt#interface;0.13.5 [compile->default(compile)]
+[debug] == resolving dependencies homework1#homework1$sbt_2.11;1.0->org.jetbrains#sbt-structure;2.3.2 [default->default(compile)]
+[info] Resolving org.jetbrains#sbt-structure;2.3.2 ...
+[debug] sbt-chain: Checking cache for: dependency: org.jetbrains#sbt-structure;2.3.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.jetbrains#sbt-structure;2.3.2
+[debug] 	typesafe-ivy-releases: revision in cache: org.jetbrains#sbt-structure;2.3.2
+[debug] 	found org.jetbrains#sbt-structure;2.3.2 in sbt-chain
+[debug] 	[2.3.2] org.jetbrains#sbt-structure;2.3.2
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.5!sbt.jar
+[debug] 	[NOT REQUIRED] org.jetbrains#sbt-structure;2.3.2!sbt-structure.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#main;0.13.5!main.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-src.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-bin.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-src.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!compiler-interface-bin.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!compiler-interface-bin.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!compiler-interface-bin.jar
@@ -611,9 +620,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 1080ms :: artifacts dl 73ms
-[debug] 	report for homework1#homework1$sbt_2.11;1.0 default produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\target\resolution-cache\reports\homework1-homework1$sbt_2.11-default.xml
-[debug] 	resolve done (1080ms resolve - 73ms download)
+[debug] :: resolution report :: resolve 796ms :: artifacts dl 23ms
+[debug] 	report for homework1#homework1$sbt_2.11;1.0 default produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/target/resolution-cache/reports/homework1-homework1$sbt_2.11-default.xml
+[debug] 	resolve done (796ms resolve - 23ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: homework1#homework1$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -909,6 +918,13 @@
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#precompiled-2_9_3;0.13.5
 [debug] 	typesafe-ivy-releases: revision in cache: org.scala-sbt#precompiled-2_9_3;0.13.5
 [debug] 	found org.scala-sbt#precompiled-2_9_3;0.13.5 in sbt-chain
+[debug] == resolving dependencies homework1#homework1$sources_2.11;1.0->org.jetbrains#sbt-structure;2.3.2 [default->default(compile)]
+[info] Resolving org.jetbrains#sbt-structure;2.3.2 ...
+[debug] sbt-chain: Checking cache for: dependency: org.jetbrains#sbt-structure;2.3.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.jetbrains#sbt-structure;2.3.2
+[debug] 	typesafe-ivy-releases: revision in cache: org.jetbrains#sbt-structure;2.3.2
+[debug] 	found org.jetbrains#sbt-structure;2.3.2 in sbt-chain
+[debug] 	[2.3.2] org.jetbrains#sbt-structure;2.3.2
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.5!sbt.jar(src)
@@ -955,6 +971,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 356ms :: artifacts dl 81ms
-[debug] 	report for homework1#homework1$sources_2.11;1.0 default produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\target\resolution-cache\reports\homework1-homework1$sources_2.11-default.xml
-[debug] 	resolve done (356ms resolve - 81ms download)
+[debug] 	[NOT REQUIRED] org.jetbrains#sbt-structure;2.3.2!sbt-structure.jar(src)
+[debug] :: resolution report :: resolve 274ms :: artifacts dl 55ms
+[debug] 	report for homework1#homework1$sources_2.11;1.0 default produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/target/resolution-cache/reports/homework1-homework1$sources_2.11-default.xml
+[debug] 	resolve done (274ms resolve - 55ms download)

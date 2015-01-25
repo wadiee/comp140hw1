@@ -1,9 +1,8 @@
 package homework1
 
-import java.io._
-
 import junit.framework.Assert._
 import junit.framework._
+import java.io._;
 
 class Assign1Test extends TestCase {
 

@@ -4,7 +4,7 @@
 		module="homework1$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150123133920"
+		publication="20150125134015"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
@@ -143,6 +143,9 @@
 		</dependency>
 		<dependency org="org.scala-sbt" name="precompiled-2_9_3" rev="0.13.5" transitive="false" conf="default->default(compile)">
 			<artifact name="precompiled-2_9_3" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.jetbrains" name="sbt-structure" rev="2.3.2" transitive="false" conf="default->default(compile)" sbtVersion="0.13" scalaVersion="2.10">
+			<artifact name="sbt-structure" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 	</dependencies>
 </ivy-module>

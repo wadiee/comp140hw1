@@ -41,7 +41,7 @@ class Parser(in: Lexer) {
     * | map <id-list> to <exp>
     * | <term> { <biop> <exp> }
     */
-  private def parseExp(token: Token): AST = token match {
+  private[homework1] def parseExp(token: Token): AST = token match {
     case keyWord: KeyWord => keyWord.name match {
       case "if" => {
         val ifContent = parseExp(in.readToken())
@@ -101,7 +101,7 @@ class Parser(in: Lexer) {
   /**
    * Factor      ::= ( Exp ) | Prim | Id
    */
-  private def parseFactor(token: Token): AST = token match {
+  private[homework1] def parseFactor(token: Token): AST = token match {
     case prim: PrimFun => prim
     case variable: Variable => variable
     case LeftParen => {
@@ -114,7 +114,7 @@ class Parser(in: Lexer) {
     case _ => throw new ParseException("ParseFactor not matching any case.")
   }
 
-  private def parseDef(token: Token): Def = token match {
+  private[homework1] def parseDef(token: Token): Def = token match {
     case variable: Variable => in.readToken() match {
       case kw: KeyWord => kw.name match {
         case ":=" => {
@@ -131,7 +131,7 @@ class Parser(in: Lexer) {
     case _ => throw new ParseException("Def is not started with Variable, started with " + token.getClass)
   }
 
-  private def parseDefList(): Array[Def] = in.peek() match {
+  private[homework1] def parseDefList(): Array[Def] = in.peek() match {
     case kw: KeyWord => {
       kw.name match {
         case "in" => Array()
@@ -142,7 +142,7 @@ class Parser(in: Lexer) {
   }
 
 
-  private def parseIdList(): Array[Variable] = in.peek() match {
+  private[homework1] def parseIdList(): Array[Variable] = in.peek() match {
     case Variable(_) => {
       in.readToken() match {
         case v: Variable => Array(v) ++ parseIdList()
@@ -162,7 +162,7 @@ class Parser(in: Lexer) {
     case _ => throw new ParseException("map [illegalToken] to")
   }
 
-  private def parseExpList(): Array[AST] = in.peek() match {
+  private[homework1] def parseExpList(): Array[AST] = in.peek() match {
     case null => Array()
     case Comma => {
       in.readToken()
@@ -182,7 +182,7 @@ class Parser(in: Lexer) {
     * <constant> ::= <empty> | <int> | <bool>
     * @param token   first token in input stream to be parsed; remainder in Lexer named in.
     */
-  private def parseTerm(token: Token): AST = {
+  private[homework1] def parseTerm(token: Token): AST = {
     if (token.isInstanceOf[Op]) {
       val op = token.asInstanceOf[Op]
       if (!op.isUnOp) throw new ParseException("unary operator")

@@ -1,30 +1,44 @@
-[info] Updating {file:/C:/Users/Wade/Desktop/Comp411/Assignment/Homework1/project/}homework1-build...
-[debug] :: resolving dependencies :: default#homework1-build;0.1-SNAPSHOT
+[info] Updating {file:/Users/ziliangzhu/IdeaProjects/comp140hw1/project/}comp140hw1-build...
+[debug] :: resolving dependencies :: default#comp140hw1-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[info] Resolving default#global-plugins;0.0 ...
+[debug] sbt-chain: Checking cache for: dependency: default#global-plugins;0.0 {compile=[default(compile)]}
+[debug] 	found default#global-plugins;0.0 in inter-project
+[debug] == resolving dependencies default#global-plugins;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[info] Resolving org.jetbrains#sbt-structure;2.3.2 ...
+[debug] sbt-chain: Checking cache for: dependency: org.jetbrains#sbt-structure;2.3.2 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.jetbrains#sbt-structure;2.3.2
+[debug] 	typesafe-ivy-releases: revision in cache: org.jetbrains#sbt-structure;2.3.2
+[debug] 	found org.jetbrains#sbt-structure;2.3.2 in sbt-chain
 [debug] resolving dependencies for configuration 'runtime'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#global-plugins;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'test'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [test]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [test]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#global-plugins;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'provided'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@596dabd0
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5678d71
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
 [debug] 	typesafe-ivy-releases: revision in cache: org.scala-lang#scala-library;2.10.4
 [debug] 	found org.scala-lang#scala-library;2.10.4 in sbt-chain
 [debug] 	[2.10.4] org.scala-lang#scala-library;2.10.4
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
 [info] Resolving org.scala-sbt#sbt;0.13.5 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.5 {provided=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.5
@@ -570,17 +584,19 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-sbt#interface;0.13.5 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'optional'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'compile-internal'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [compile-internal]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [compile-internal]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#global-plugins;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile]
@@ -901,22 +917,26 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-sbt#interface;0.13.5 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'runtime-internal'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [runtime-internal]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [runtime-internal]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#global-plugins;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'test-internal'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [test-internal]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [test]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [test-internal]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [test]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#global-plugins;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile]
@@ -1237,18 +1257,18 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-sbt#interface;0.13.5 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'plugin'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [plugin]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [plugin]
 [debug] resolving dependencies for configuration 'sources'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [sources]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [sources]
 [debug] resolving dependencies for configuration 'docs'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [docs]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [docs]
 [debug] resolving dependencies for configuration 'pom'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [pom]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [pom]
 [debug] resolving dependencies for configuration 'scala-tool'
-[debug] == resolving dependencies for default#homework1-build;0.1-SNAPSHOT [scala-tool]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->default]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->runtime]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->compile]
+[debug] == resolving dependencies for default#comp140hw1-build;0.1-SNAPSHOT [scala-tool]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->default]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->runtime]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->compile]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->default]
@@ -1266,8 +1286,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-reflect;2.10.4 [runtime->compile]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->compile]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->master]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->master]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->optional(default)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#jline;2.10.4 [optional->master(*)]
 [info] Resolving org.scala-lang#jline;2.10.4 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.4 {optional=[compile(*), master(*)]}
@@ -1282,18 +1302,19 @@
 [debug] 	typesafe-ivy-releases: revision in cache: org.fusesource.jansi#jansi;1.4
 [debug] 	found org.fusesource.jansi#jansi;1.4 in sbt-chain
 [debug] == resolving dependencies org.scala-lang#jline;2.10.4->org.fusesource.jansi#jansi;1.4 [compile->compile(*)]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->default]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->runtime]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->compile]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->master]
-[debug] == resolving dependencies default#homework1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->default]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->runtime]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->compile]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->master]
+[debug] == resolving dependencies default#comp140hw1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->optional(default)]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
+[debug] 	[NOT REQUIRED] org.jetbrains#sbt-structure;2.3.2!sbt-structure.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.5!sbt.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#main;0.13.5!main.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-src.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-bin.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-src.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!compiler-interface-bin.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!compiler-interface-bin.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!compiler-interface-bin.jar
@@ -1337,19 +1358,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 1972ms :: artifacts dl 167ms
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT compile produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-compile.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT runtime produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-runtime.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT test produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-test.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT provided produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-provided.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT optional produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-optional.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT compile-internal produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-compile-internal.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-runtime-internal.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT test-internal produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-test-internal.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT plugin produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-plugin.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT sources produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-sources.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT docs produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-docs.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT pom produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-pom.xml
-[debug] 	report for default#homework1-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Wade\Desktop\Comp411\Assignment\Homework1\project\target\resolution-cache\reports\default-homework1-build-scala-tool.xml
-[debug] 	resolve done (1972ms resolve - 167ms download)
+[debug] :: resolution report :: resolve 1843ms :: artifacts dl 135ms
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT compile produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-compile.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT runtime produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-runtime.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT test produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-test.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT provided produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-provided.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT optional produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-optional.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT compile-internal produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-compile-internal.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT runtime-internal produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-runtime-internal.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT test-internal produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-test-internal.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT plugin produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-plugin.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT sources produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-sources.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT docs produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-docs.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT pom produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-pom.xml
+[debug] 	report for default#comp140hw1-build;0.1-SNAPSHOT scala-tool produced in /Users/ziliangzhu/IdeaProjects/comp140hw1/project/target/resolution-cache/reports/default-comp140hw1-build-scala-tool.xml
+[debug] 	resolve done (1843ms resolve - 135ms download)
 [info] Done updating.

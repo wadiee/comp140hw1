@@ -1,6 +1,6 @@
 package homework1
-import java.io._
 import scala.collection.mutable.Map
+import java.io._;
 
 /** Jam general AST type */
 trait AST {
